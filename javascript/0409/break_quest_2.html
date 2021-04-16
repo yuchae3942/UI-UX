@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break_quest2</title>
+    <script>
+        var num = 0, total = 0;
+
+        while(true){
+            num = Number(prompt("숫자를 입력하세요."));
+            total += num;
+            // total이 5000이상이 되거나, num에 0을 입력하면 입력 종료
+            if(total >= 5000 || num == 0) // || : or
+                break; //반복문을 강제로 종료
+        }
+        document.write(total);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

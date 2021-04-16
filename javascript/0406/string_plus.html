@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 덧셈</title>
+    <script>
+        /*
+            정수 두개 저장할 변수와 문자열 저장할 변수 1개 선언
+        */
+       var x = 100, y = 150, msg ="Hello world";
+       document.write(msg + x, "<br>");  
+       document.write(msg + y, "<br>");
+       document.write(msg + x + y, "<br>");
+       document.write(x + y + msg, "<br>");
+       document.write(msg + (x + y), "<br>");
+       var z = x + y + msg;
+       document.write(typeof z); //문자 + 숫자 = 숫자또한 문자열로 포함
+       //계산은 한번에 되는 것이 아니라 하나씩 순서대로 진행
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

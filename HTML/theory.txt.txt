@@ -1,0 +1,107 @@
+
+[0317]
+html 파일 분석
+    - <!DOCTYPE html> : 문서의 종류, 이 문서는 html문서이다.
+    - <head> : html 문서의 설정
+    - <html> : html 문서의 시작
+    - <body> : 웹페이지에 출력되는 정보
+
+
+
+블록요소와 인라인요소
+    -블록요소 
+        1. 사용 가능한 최대 가로 너비를 사용한다.
+        2. width, height를 사용하여 크기를 지정할 수 있다.
+        3. width: 100%;  height: 0; 으로 시작한다.
+        4. 수직으로 쌓인다.
+        5. 띄어쓰기가 화면에 안 보인다.
+        6. margin, padding의 top right bottom left 사용 가능
+        7. 레이아웃
+
+    -인라인요소
+        1. 필요한 만큼의 너비를 사용한다.
+        2. width, height를 사용하여 크기를 지정할 수 없다.
+        3. width: auto; height: 0; 으로 시작한다.
+        4. 수평으로 쌓인다.
+        5. 띄어쓰기가 화면에 출력된다.
+        6. margin, padding의 top, bottom을 온전하게 사용할 수 없다.
+        7. TEXT
+
+
+
+[0318]
+이미지 파일 확장자
+    - jpg 저화질 사진 이미지
+    - png 고화질 사진 이미지 (투명도 지원)
+    - svg 벡터 이미지 
+    - gif 블릿이미지, 로고 (저해상도 이미지) 
+
+
+
+[0319]
+네임엥커
+    - <a href="#id속성값"> : 해당 id속성을 가진 태그로 이동 (맨 위로, 주석)
+
+
+
+    
+상대경로와 절대경로
+    상대경로
+        - ./ : 작업파일 주변 (생략가능)
+        - ../ : 상위 파일
+    절대경로
+        - https://
+        - /
+
+
+
+<option>
+    - label="" 과 value="" 을 따로 기재 하지 않는 다면 요소 안에 포함된 텍스트가 화면에 노출, 서버로 제출 된다.
+    - 선택적 빈태그로 활용할 수 있음
+        - 텍스트를 요소에 포함 할 수 없음
+        - label 속성을 사용하여 화면에 표시될 텍스트 지정
+        - value 속성을 사용하여 제출될 값 지정
+    <option label="Apple" value="apple"> : Apple 출력
+    <option>Apple</option> : Apple 출력
+
+
+
+
+global attributes
+    - class="" : 별칭
+    - id="" : 고유 이름 (문서 내 고유해야 함)
+    - title="" : 툴팁
+    - draggable="" : 드래그 가능 여부
+    - tabindex="" : tap키를 이용해 순차적으로 탐색
+        - 대화형 콘텐츠(img, input등)는 기본적으로 마크업 순서대로 탭 순서가 정해짐
+        - 비대화형 콘텐츠에 바인딩하여 탭순서에 포함시킬 수 있다.
+    - lang="" : 사용되는 언어
+    - data- : JavaScript에서 이용할 수 있는 데이터를 저장하는 용도
+    - hidden : 요소를 숨김
+    - display : inline, block 변경 가능
+
+
+
+<input type="radio"> : 여러개 중 하나만 선택 가능
+
+<input type="radio" name="chae">
+<input type="radio" name="chae">
+<input type="radio" name="chae">
+<input type="radio" name="chae">
+
+name 속성 값을 동일하게 설정해서 radio button을 그룹 묶어야 하나만 선택 가능
+
+
+
+<input type="checkbox" name="required">
+체크박스는 name 속성을 반드시 사용해야만 서버로 전송된다.
+
+
+    
+
+    
+
+
+
+
+

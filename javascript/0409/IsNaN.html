@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsNaN</title>
+    <script>
+        // IsNaN : 숫자가 아닌가요? >>숫자가 아니어야 true가 나옵니다.
+        
+        document.write(isNaN(1234), "<br>"); //숫자 false
+        document.write(isNaN("12345"), "<br>"); // 숫자 false
+        document.write(isNaN("abcd"), "<br>"); // 숫자X true
+        document.write(isNaN(true), "<hr>"); // true, false는 숫자 1,0 로 표시 ---> 숫자 false
+
+        document.write(isNaN(NaN), "<br>");
+        document.write(isNaN(undefined), "<br>"); //변수를 선언하지 않거나, 변수는 선언했으나 데이터 없는경우
+        document.write(isNaN(null), "<hr>");
+
+        document.write(Number(true), "<br>");
+        document.write(Number(false), "<br>");
+        document.write(Number(null), "<br>"); //null : 기본적으로 데이터가 0이다. (데이터가 비었음을 암시)
+        document.write(Number("1234"), "<br>");
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

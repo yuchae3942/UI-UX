@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device move</title>
+    <script>
+        //사용자 정보를 전부 소문자로 변환하여 뽑음
+        var info = navigator.userAgent.toLowerCase();
+        //도출 값 : windows, macintosh, iphone, android, linux
+        //window ms
+        //macintosh apple mac
+        //iphone apple iphone
+        //androud google
+
+
+        if(info.indexOf("windows") != -1){
+            document.write("<a href='https://www.microsoft.com/ko-kr'>ms</a>")
+        }
+        else if(info.indexOf("macintosh") != -1){
+            document.write("<a href='https://www.apple.com/kr/mac/'>mac</a>")
+        }
+        else if(info.indexOf("iphone") != -1){
+            document.write("<a href='https://www.apple.com/kr/phone/'>iphone</a>")
+        }
+        else {
+            document.write("<a href='https://www.google.com'>google</a>")
+        }
+
+        
+        // if (info.indexOf("window") != -1) {
+        //     window.open("https://www.microsoft.com", "_blank")
+        // }
+        // else if (info.indexOf("macintosh") != -1) {
+        //     window.open("https://www.apple.com/kr/mac/", "_blank")
+        // }
+        // else if (info.indexOf("iphone") != -1) {
+        //     window.open("https://www.apple.com/kr/phone/", "_blank")
+        // }
+        // else if (info.indexOf("android") != -1) {
+        //     window.open("https://www.google.com", "_blank")
+        // }
+        // else {
+        //     document.write("데이터 없")
+        // }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

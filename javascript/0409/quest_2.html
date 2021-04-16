@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quest2</title>
+    <script>
+        /*
+            초(second) 입력
+            3985를 입력 
+            시 : 1,  분 : 6, 초 : 25
+        */
+        // document.write(Math.floor(3.141414));
+        var h, m, s;
+        s = Number(prompt("초(second) 입력하세요."))
+
+        h = Math.floor(s / 3600);
+        s %= 3600; //분까지의 데이터만 존재
+        m = Math.floor(s / 60);
+        s %= 60;
+        document.write("h : "+h, "m : ",+m, "s : ", +s);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

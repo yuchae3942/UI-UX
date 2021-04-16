@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>폼태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form action="" method="GET">
+        가입 약관 동의 여부 : 
+        <!--radio는 여러개 중 하나의 항목만 선택할 때 쓰임
+            동일한 name 속성값을 부여하여 그룹화
+        -->
+        <input type="radio" name="agree" value="yes"> 예
+        <input type="radio" name="agree" value="no"> 아니오<br>
+        날짜 : 
+        <input type="date" name="date"><br>
+        수량 : 
+        <input type="number" name="" min="0" max="20" step="3"><br>
+        첨부파일 : 
+        <input type="file" name="" id=""><br>
+        <input type="range" value="100"><br> <!-- 0~100까지 값 설정이 가능 -->
+        color picker  :
+        <input type="color" name="color"><br>
+        <!-- select에서 서버로 전송되는 값은 value 속성 
+            selected 이용해서 기본적으로 선택할 항목 지정
+        -->
+        <select name="selc1">
+            <option value="F" selected>---선택---</option>
+            <option value="A">선택1</option>
+            <option value="B">선택2</option>
+            <option value="C">선택3</option>
+            <option value="D">선택4</option>
+        </select><br>
+        <!-- input태그의 type="text"와 속성이 동일 
+            cols 컬럼갯수(세로), rows라인 수 (가로)
+            textarea 태그에서는 태그안에 내용을 넣지 않음 (줄바꿈, 띄어쓰기도X)
+        -->
+        <textarea name="" id="" placeholder="예쁜말 고운말"></textarea>
+
+        <button type="submit">전송</button> <!--<input type="submit">과 동일, button에 type지정 안하면 디폴트로submit지정-->
+    </form>
+    
+</body>
+</html>

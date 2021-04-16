@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* a {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        } */
+        .none {
+            /* display: none; 아예사라져ㅕㅕㅕㅕㅕㅕ ㅠㅠ*/
+            visibility: hidden;
+        }
+        ul {
+            list-style-type: none;
+           
+        }
+        li {
+            border: 1px solid black;
+            display: inline-block;
+            width: 100px;
+            /* height: 50px; */
+            text-align: center;
+        }
+        .menu_a {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 17px 5px;
+            line-height: 16px;/* line-height: 50px; */
+            display: inline-block;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            
+           
+
+            /* line-height: 50px; */
+            
+        }
+    </style>
+</head>
+<body>
+    <!--
+        display: ;
+        inline:
+            - <a> <span> <img> ...
+            - TEXT
+            - width, height 설정 X
+            - margin-top, bottom 설정 X
+            - padding-top, bottom 정확히 X
+
+        block:
+            - <p> <div> <h1> <hr>....
+            - 레이아웃
+            - width, height 설정가능
+            - 여백설정에 제한X
+
+        inline-block
+            - 수평정렬
+            - width, height 설정 가능
+            - 여백설정 제한X
+            - 인라인요소처럼 가로로 쌓이지만 크기, 여백 설정이 자유롭다.
+            - ****인라인요소는 공백처리가 화면에 출력 (하나만?????)
+    -->
+    <ul>
+        <li><a href="" class="menu_a">항ddddddddddddd목1</a></li>
+        <li><a href="" class="menu_a">항목2</a></li>
+        <li><a href="" class="menu_a">항목3</a></li>
+        <li><a href="" class="menu_a">항목4</a></li>
+        <li><a href="" class="menu_a">항목5</a></li>
+    </ul>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <hr>
+    <h2>display: none; 과 visiblity: visible 차이</h2>
+    <img src="./cat-5887341_640.jpg" alt="The Cat" class="none">
+    <img src="./cat-5887341_640.jpg" alt="The Cat" class="hidden">
+
+
+</body>
+</html>

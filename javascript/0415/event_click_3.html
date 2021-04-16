@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>default value</title>
+    <script>
+        window.onload = function(){
+            var a = document.getElementsByTagName("a");
+            for(i=0; i<a.length; i++){
+                a[i].onclick = function(e) {
+                    if(this.id == "google"){
+                        e.preventDefault(); //기존에 셋팅된 이벤트 기능을 제거
+                        //return false; 기존에 셋팅된 이벤트 기능을 제거
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.google.com" id="google">Google로 이동</a>
+    <a href="https://www.naver.com" id="naver">Naver로 이동</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 300px;
+    float: left;
+
+
+}
+
+.in {
+    clear: both;
+    display: inline-block;
+}

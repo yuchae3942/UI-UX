@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center; /*굳이 width값 지정 보다 안에 텍스트만 가운데 정렬하는게 낫다*/
+    margin: 20px auto;
+
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid lightgray;
+}
+   
+form>ul {
+    list-style-type: none;
+}
+
+.container>form>ul>li>ul {
+    padding-left: 40px;
+    list-style-type: disc;
+    color: gray;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 80%;
+    font-size: 20px;
+}
+
+.sub_txt {
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+    box-sizing: border-box;
+    padding-right: 10px;
+    height: 42px;
+    border-bottom: 2px solid gray;
+
+}
+.border_bottom {
+    border-bottom: 2px solid gray;
+}
+
+select {
+    width: 100px;
+
+
+}

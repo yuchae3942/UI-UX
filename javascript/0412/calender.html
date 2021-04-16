@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+    <script>
+        //2021년도 4월 달력
+        //달력 공백 시작일 요일번호?, 마지막일 요일번호?
+        var today = new Date("2021-04-12");
+        var tag = "<h2>" + (today.getDate() + 1) + "</h2>"
+        tag += "<table><tr><th>일</th><th>월</th>"
+            +"<th>화</th><th>수</th><th>목</th>"
+            +"<th>금</th><th>토</th>";
+        
+        var start = new Date();
+        start.setHours(0);
+        start.setMinutes(0);
+        start.setSeconds(0);
+        start.setDate(1);
+        var end = new Date();
+        end.setMonth(end.getMonth()+1); //다음달 변경;
+        start.setHours(0);
+        start.setMinutes(0);
+        start.setSeconds(0);
+        end.setDate(0); //0 전달 마지막날
+        console.log(start);
+        console.log(end);
+        //달력첫칸(공백)날짜 계산
+        start.setDate(start.getDate()-start.getDay()); // 날짜 - 요일값(목요일:4)
+        //달력 마지막칸 날짜 계산
+        end.setDate(end.getDate()+6-end.getDay());
+        console.log("달력 첫칸 : " + start);
+        console.log("달력 마지막칸 : " + end);
+        //달력 줄수를 계산
+        var line = (end.getTime()-start.getTime()) / (1000*60*60*24*7);
+        console.log("달력 줄 수 : " + line);
+        for (j=0; j<7; j++) {
+            tag+="<tr>";
+            for(i=0; i<7;i++){
+            if(month != start.getMonth())
+                tag+="<td class='disabled'>" + start.getDate() + "</td>";
+            else
+                tag+="<td>"+start.getDate()+"</td>";
+            start.setDate(start.getDate()+1);
+        }
+        tag+="</tr>";
+        }
+    
+        //주차별로 완성
+    
+       
+        // for(i=0; i<7;i++){
+        //     tag+="<td>"+start.getDate()+"</td>"
+        //     start.setDate(start.getDate()+1)
+        // }
+       
+        //
+       
+       
+        tag +="</table>";
+        document.write(tag);
+
+        
+       
+
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid dodgerblue;
+            width: 100px;
+        }
+        td {
+            height: 100px;
+            text-align: right;
+            vertical-align: top;
+        }
+
+        td:nth-child(7n), th:nth-child(7n) {
+            color: blue;
+        }td:nth-child(7n+1), th:nth-child(7n+1) {
+            color: red;
+        }
+        .disabled {
+            color: lightgray !important;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

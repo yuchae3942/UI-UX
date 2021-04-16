@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc Page</title>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+
+        //유저 정보를 확인해서 모바일 기기로 접속했는지 체크
+        var result = info.indexOf("iphone") + info.indexOf("android") + info.indexOf("ipad")
+        if(result != -3) {
+            if(confirm("모바일 기기로 접속하셨습니다. 모바일로 이동합니다."))
+                location.href = "mobile_page.html"
+        }
+    </script>
+</head>
+<body>
+    <h1>PC version page</h1>
+</body>
+</html>

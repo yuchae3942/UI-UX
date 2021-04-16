@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!-- 폼 태그 : 사용자로부터 직접적으로 데이터를 입력을 받아서 서버로 데이터를 전송을 해주는 태그 -->
+    <form action="" method="GET"><!--전송한 정보를 처리할 웹페이지의 URL-->
+        <!-- value : input 태그 초기값
+        placeholder : 입력할 내용의 힌트, 입력하면 힌트는 사라짐,android에서 동일한 속성 : hint 
+        autofocus : 페이지 로드시 자동으로 포커스
+        required : 서버로 전송시 반드시 입력을 해야되는 태그로 설정
+        readonly : 읽기 전용
+        maxlength : 최대 입력할 수 있는 글자 수
+        minlength : 최소 입력해야 하는 글자 수
+        disabled : 비활성화 서버로 내용이 전송되지 않음
+        label : 포함되거나, for속성으로 연결된 input태그를 활성화 시킴
+        checked : 미리 체크 
+        checkbox
+        submit-->
+        <label for="id">아이디를 입력하세요.</label><input type="text" id="id" name="id" placeholder="아이디를 입력하세요" autofocus required><br>
+        <label for="pass">비밀번호를 입력하세요.</label><input type="password" id="pass" name="pass" placeholder="비밀번호를 입력하세요" required maxlength="10" minlength="5"><br>
+        <input type="text" value="텍스트 데이터" disabled name="text"><br>
+        <label><input type="checkbox" name="hobby" value="game" checked> 게임</label> <br>
+        <label><input type="checkbox" name="hobby" value="game"></label> 독서 <br>
+        <label><input type="checkbox" name="hobby" value="game"> 등산</label> <br>
+
+        <input type="submit" value="로그인">
+        
+        <!-- 라벨 가능 요소를 참조 -->
+        <input type="checkbox" id="user-agreement" />
+        <label for="user-agreement">동의하십니까?</label>
+
+        <!-- 라벨 가능 요소를 포함 -->
+        <label><input type="checkbox" />동의하십니까?</label>
+
+
+
+    </form> 
+</body>
+</html>

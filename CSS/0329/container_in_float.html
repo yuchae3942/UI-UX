@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>container_in_float</title>
+    <style>
+        .container {
+            width: 1200px;
+            padding: 10px 0px; /*부모요소의 padding 값이 먹어서,,,?*/
+            border: 1px solid black;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            font-size: 32px;
+            font-weight: bold;
+            border: 1px solid crimson;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+    <div class="container clear">
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>

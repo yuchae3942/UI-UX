@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quest1</title>
+    <script>
+        /*
+            숫자 두개를 입력 받아서 두수의 최대 공약수를 출력
+            
+            6과 10을 입력받았을 때
+            6, 10의 최대 공약수는 ? 2
+
+            6과 15을 입력받았을 때
+            6, 15의 최대 공약수는 ? 3
+
+        */
+       // 1. 숫자 두개 입력
+       // 2. 반복문 - 1부터 입력한 숫자 중 작은 숫자까지 나누기를 실행
+       // 3. 두 숫자를 1부터 나누어서 둘다 나머지가 0이 나오면 약수
+       // 4. 약수들 중에서 제일 큰 최대값을 구함
+
+        var n1 = Number(prompt("첫번째 숫자 입력"));
+        var n2 = Number(prompt("두번째 숫자 입력"));
+        var gcd;
+        
+
+        if(n1 > n2) {
+            var temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+
+        /* for(i=1; i<=n1; i++) {
+            if(n1 % i == 0 && n2 % i == 0)
+                gcd = i;
+        } */
+        for(i =  n1; i > 0; i--){
+            if(n1 % i == 0 && n2 % i == 0) {
+                gcd = i;
+                break;
+            }
+        }
+        document.write(gcd, " ");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

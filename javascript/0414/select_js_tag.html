@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <input type="text," name="t1" value="1"><br>
+    <input type="text," name="t2" value="2"><br>
+    <input type="text," name="t3" value="3"><br>
+    <input type="text," name="t4" value="4"><br>
+    <p><strong>1</strong></p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p></p>
+    <h1>h1-1</h1>
+    <script>
+        // 태그명 기준으로 접근  태그명,,,,,배열로 관리????????
+        var p = document.getElementsByTagName("p");
+        console.log("선택된<p>");
+        console.log("선택된 <p> 개수 : " + p.length);
+        // innerHTML : 선택된 요소안에 있는 html태그 내용을 가지고 있는 변수
+        for(i=0; i<p.length; i++)
+           { console.log(p[i].innerHTML);
+            p[i].style.backgroundColor = "lightgray ";}
+
+        var h1 = document.getElementsByTagName("h1");
+        console.log("선택된 <h1> 개수 : " + h1.length);
+            for(i=0; i<h1.length; i++)
+                console.log(h1[i].innerHTML);
+
+        var input = document.getElementsByTagName("input");
+        console.log("선택된 <input> 개수 : " + input.length);
+        for(i=0; i<input.length; i++) {
+               //input tag에 입력된 값을 읽어옴 (value속성값)
+               console.log(input[i].value + " : " + input[i].name);
+               input[i].value += i;
+        }
+    </script>
+    <style>
+        
+    </style>
+</body>
+</html>

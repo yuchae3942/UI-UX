@@ -1,0 +1,254 @@
+선택자 {
+    property: value;
+    property: value;
+}
+
+선택자(selector)의 역할 : 속성과 값을 지정할 대상을 검색
+속성(property)과 값(value)의 역할 : 검색된 대상에 지정될 css명령
+주석(comment) : /* */
+
+
+
+선언방식
+1. 인라인 방식 (html에 직접 입력)
+2. 내장방식 <style>태그 사용
+3. 링크방식 <link>태그 사용하여 외부css문서를 불러와 적용 (추천) 
+    html에서 외부css문서 불러오기
+    동시에 모든 css들을  (병렬방식)
+4. @import방식 @import를 이용하여 외부css문서를 불러와 적용 
+    css에서 외부 css문서 불러오기
+    하나가 끝나야 다음것 호출 (직렬방식)
+
+
+
+
+선택자(selector)
+- 기본 선택자
+    - 전체 선택자
+        - 모든요소를 선택
+        - * (asterisk)
+    - 태그 선택자
+        - 태그이름으로 대상 선택
+        - h1 (e)
+    - 클래스 선택자
+        - class 속성값으로 대상 선택
+        - .container (.c-v)
+    - 아이디 선택자
+        - id 속성값으로 대상 선택
+        - #nav (#i-v)
+
+- 복합 선택자
+    - 일치 선택자
+        - e와 f를 동시에 만족하는 대상 선택
+        - div.contain (ef) 
+    - 자식 선택자
+        - e의 자식요소 f를 선택
+        - ul>.item (e > f)
+    - 후손(하위) 선택자
+        - e의 하위요소 f를 선택
+        - div li (e f) *띄어쓰기 주의*
+    - 인접 형제 선택자
+        - e+f (e의 형제 요소 중 바로 뒤에 오는 f를 선택)
+        - .item+li (e+f)
+    - 일반 형제 선택자
+        - e~f (e의 next 형제 요소 f 모두 선택)
+        - .item~li (e~f)
+
+- 가상 클래스 선택자
+    - **transition: 0.5s 라는 속성사용가능**
+    - hover
+        - e에 마우스가 올라가 있는 동안에만 e 선택
+        - a:hover (e:hover)
+    - active
+        - e를 마우스로 클릭하는 동안에만 e 선택
+        - .box:active (e:active)
+    - focus
+        - e가 포커스 된 동안에만 e 선택
+        - 대화형 콘텐츠에서만 사용 가능 (input, img, tabindex, iframe, a, select, label...)
+        - input:focus (e:focus) **이벤트: hover, active, focus**
+    - first child
+        - e가 형제요소 중 첫번째 요소라면 선택
+        - .item li:first-child (e:first-child)
+    - last child
+        - e가 형제요소 중 마지막 요소라면 선택
+        - .item li:last-child (e:last-child)
+    - Nth child
+        - e가 형제요소 중 n번째 요소라면 선택
+        - .item li:nth-child(3) (e:nth-child(n))
+        - n키워드는 0부터 해석 **짝수(2n) 홀수(2n+1) 3번째 요소부터 선택(n+2)**
+        -**n번째 요소가 e가 아니라면 아무것도 선택X (first, last 포함)**
+            - .item :nth-child(1) 식으로 사용가능 **class="item"의 하위 요소 중 태그 상관없이 1번째 요소면 선택**
+    - Nth of type
+        - e의 태그이름과 동일한 형제요소 중 e가 n번째 요소라면 선택
+        - .item li:nth-of-type(2) (e:nth-of-type(n))
+        - e에는 태그선택자만 넣고 사용하자
+    - 부정 선택자
+        - s가 아닌 e 선택
+        - li:not(.item) (e:not(s))
+
+
+- 가상 요소 선택자 : css를 통해서 html에 가상의 요소를 부여
+    - before
+        - e요소의 html내부의 맨 앞부분에 내용(content)삽입
+        - ::before {content: "";} (e::before {content: ""; + css스타일}) 
+    - after
+        - e요소의 html내부의 맨 뒷부분에 내용(content)삽입
+        - ::after {content: "";} (e::after {content: ""; + css스타일})
+        - **img삽입 가능 content: url(""); 이미지 사이즈 조절은 불가능??**
+
+- 속성(attribute) 선택자
+    - attr
+        - 속성 attr을 포함한 요소 선택
+        - [class] ([attr])
+    - attr=value
+        - 속성 attr을 포함하며 속성값이 value인 요소 선택
+        - [class="item"] (attr="value") **큰따옴표 없어도O**
+    - attr^=value
+        - 속성 attr을 포함하며 속성값이 value로 시작하는 요소 선택
+        - [class^="item"] (attr^="value") **큰따옴표 없어도O**
+    - attr$=value
+        - 속성 attr을 포함하며 속성값이 value로 끝나는 요소 선택
+        - [class$="item"] (attr$="value") **큰따옴표 없어도O**
+    
+
+
+
+
+상속
+- 대부분 text와 관련된 속성들 
+- 강제상속 
+    - position: inherit; 을 이용하여 강제 상속 
+    - 자식을 제외한 하위요소에는 적용X
+    - 모든 속성을 강제 상속할 수 있는 것X
+
+
+우선순위
+- 명시도 점수가 높은 선언이 우선 (명시도)
+- 점수가 같은 경우, 가장 마지막에 해석(늦게 작성한)되는 선언이 우선(선언순서)
+- 명시도는 상속 규칙보다 우선 (중요도)
+- !important 가 적용된 선언 방식이 다른 모든 방식보다 우선(중요도)
+
+1. !important : 절대 우선
+2. 인라인 선언방식 : 1,000pt
+3. 아이디 선택자 : 100pt
+4. 클래스 선택자(가상 클래스-부정 선택자 제외**not(.box) = 10점(.box)) : 10pt
+5. 태그 선택자(가상 요소 선택자) : 1pt
+6. 전체 선택자 : 0pt
+7. 상속 : 계산하지 않음 
+
+
+
+
+단위
+- % :부모요소의 크기가 기준
+- em
+    - 자기자신의 폰트 크기가 기준
+    - font-size는 부모요소에게 상속받을 수 있음을 주의
+- rem
+    - <html>의 폰트 크기가 기준
+- vw
+    - 뷰포트의 가로(width)길이 기준
+    - 백분율로 사용 (50vw : 뷰포트의 50%)
+- vh
+    - 뷰포트의 세로(height)길이 기준
+    - 백분율로 사용
+- vmin
+    - 뷰포트의 가로(width),세로(height)중 더 작은쪽이 기준
+    - 백분율로 사용 (50vw : 뷰포트의 50%)
+- vmax
+    - 뷰포트의 가로(width),세로(height)중 더 큰쪽이 기준
+    - 백분율로 사용
+
+
+
+
+
+
+
+
+
+Box-Model
+- width 
+    - default : auto (block: 100%, inline: 0) **default : css에 속성값을 지정하지 않아도 이미 지정되어있는 값**
+    - 단위로 지정
+- height
+    - default : auto (block: 0, inline: 0)
+    - 단위로 지정
+- max-width
+    - 요소의 최대 가로 너비를 지정
+    - default : none
+    - auto, 단위
+    - **자식요소에 지정시,(단, width: auto;) 부모요소가 아무리 커져도 max-width 값 이상 늘어날 수 없다.**
+- min-width
+    - 요소의 최소 가로 너비를 지정
+    - default : 0
+    - auto, 단위
+    - **자식요소에 지정시,(단, width: auto;) 부모요소가 아무리 작아져도 min-width 값 이상 줄어들 수 없다.**
+- max-height
+    - 요소의 최대 세로 너비를 지정
+    - default : none
+    - auto, 단위
+- min-height
+    - 요소의 최소 세로 너비를 지정
+    - default : 0
+    - auto, 단위
+
+- margin 
+    - 요소의 바깥(외부)여백을 지정
+    - 단축속성
+    - 음수 값 사용O
+    - default : 0
+    - auto, 단위
+    - % : 부모요소의 가로너비(width)에 대한 비율로 지정
+
+- margin-collaps : 마진의 특정한 값들이  중복되어 합쳐지는 현상
+    - 형제 요소들의 margin-top과 margin-bottom 이 만났을 때
+    - 부모요소의 margin-top과 자식요소의 margin-top이 만났을 때
+    - 부모요소의 margin-bottom과 자식요소의 margin-bottom이 만났을 때 
+    - 계산법
+        - 둘다 양수 : 더 큰 값으로 중복
+        - 둘다 음수 : 더 작은 값(숫자가 큰 값)으로 중복 ( -30 -10 = -30px로 중복되며, 30px만큼 두 요소가 겹쳐진다.)
+        - 양수와 음수 : 더한 값으로 중복 (-30px + 10px; = -20px로 중복되며, 20px만큼 두 요소가 겹쳐진다.)
+
+
+
+- padding
+    - 요소의 안쪽(내부)여백을 지정
+    - 단축속성
+    - default : 0
+    - 단위
+    - % : 부모요소의 가로너비(width)에 대한 비율로 지정
+    - 크기 증가 : 추가된 padding값 만큼 요소의 크기가 커지는 현상
+        - box-sizing: border-box; 로 쉽게 자동계산할 수 있다. (content-box + padding+ border = width로 자동으로 계산)
+
+- border 
+    - 요소의 테두리 선을 지정
+    - 단축속성
+        - border-width(단축, 개별) : 선의 두께 (단위: px, em, cm 등...)
+        - border-style(단축, 개별) : 선의 종류 (solid, dotted, dashed, double, inset, outset, hidden**table요소에서만 사용**)
+        - border-color(단축, 개별) : 선의 색상 (default: black) **속성값 transparent : 투명한 선**
+            - border: 두께 종류 색상;
+    - 크기 증가 : 추가된 border-width값 만큼 요소의 크기가 커지는 현상
+        - box-sizing: border-box; 로 쉽게 자동계산할 수 있다. (content-box + padding+ border = width로 자동으로 계산)
+
+- box-sizing : 요소의 크기 계산 기준을 지정
+    - content-box : default 너비(width, height)는 content box만의 크기
+    - border-box : 너비(width, height)는 content padding border을 포함한 크기
+
+
+- display : 요소의 박스 타입(유형)을 설정
+    - block
+    - inline
+    - inline-block : <input>
+        - 베이스는 inline
+        - 수평으로 쌓임
+        - width, height, margin-top(bottom), padding-top(bottom) 사용가능
+    - 기타 (table, table-cell, flex 등,,,)
+    - none : 요소가 사라짐
+        - visiblity: hidden; 혹은 opacity: 0; 과 다름 (요소는 화면에서 안 보이지만 자리는 차지함)
+        
+- overflow : 요소의 크기 이상으로 내용(후손요소, text등...)이 넘쳤을 때, 내용의 보여짐을 제어
+    - visible : default 넘친부분을 자르지 않고 그대로 보여줌
+    - hidden : 넘친 부분을 잘라내고, 보이지 않도록 함
+    - scroll : 넘친 부분을 잘라내고, 스크롤바를 이용하여 볼 수 있도록 함 (강제)
+    - auto : 넘친 부분이 있는 경우만 잘라내고, 스크롤바를 이용하여 볼 수 있도록 함 (조건)

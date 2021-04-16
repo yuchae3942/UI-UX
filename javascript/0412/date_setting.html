@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date setting</title>
+    <script>
+        var today = new Date("2021-04-12");
+        today.setDate(31); //날짜 데이터 중 일자를 바꾸는 부분
+        document.write(today, "<br>"); //4월 31일은 데이터X --->자동으로 5월 1일로 변경
+        today.setDate(0);
+        document.write(today, "<br>");
+        today.setDate(-1);
+        document.write(today, "<br>");
+
+        // today에 저장된 값을 기준으로 전날 날짜로 이동하는 코드 작성
+        // setDate / getDate,  setTinme/getTime 둘중 하나를 이요
+
+        var today = new Date("2021-04-12");
+        today.setDate(today.getDate() -1);
+        document.write(today, "<br>");
+        today.setTime(today.getTime()-(1000*60*60*24));
+        document.write(today, "<br>");
+
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

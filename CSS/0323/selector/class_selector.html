@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>clss selector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* 
+        table, th, td 선택자를 이용해서 선택 
+        여백, 테두리 설정
+        */
+        /* border-collapse: collapse; : cell spacing 초기화 (border 한줄) */
+        /* border: 1px solid black; : 1px 검정색 실선 */
+        table {
+            border-collapse: collapse;
+        }
+        /* 
+        그룹선택자 : 
+        tag, tag {
+
+        }
+        */
+        th, td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        /* td {
+            padding: 5px;
+            border: 1px solid black;
+        } */
+
+        /*
+         클래스 선택자 : 미리 css디자인을 만든 후에 해당 디자인이 필요한 태그에게 디자인 적용하는 방식(like stamp) 
+         .class {
+
+         }
+        */
+        .red {
+            color: red;
+        }
+        /* 클래스 선택자 under를 지정한 후 밑줄 설정 */
+        .under {
+            text-decoration: underline;
+        }
+        #blue {
+            color: blue;
+        }
+        /* id selector > class selector > tag selector */
+
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <!--id는 class 선택자보다 디자인이 우선적으로 적용됨-->
+                <th>번호</th>
+                <th>제목</th>
+                <th class="red" id="blue">작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        
+            <tr>
+                <td class="red">1</td>
+                <td>군인·군무원·경찰공무원 기타 법률이 정하는 자가 전투·훈련등 직무집행과 관련하여 받은 손해에 대하여는 법률이 정하는 보상외에 국가 또는 공공단체에 공무원의 직무상 불법행위로 인한 배상은 청구할 수 없다.</td>
+                <td>지석영</td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</td>
+                <td>최영</td>
+            </tr>
+        
+            <tr>
+                <td>3</td>
+                <td class="under">국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다.</td>
+                <td class="under">이종무</td>
+            </tr>
+        
+            <tr>
+                <td>4</td>
+                <td class="red under">국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.</td>
+                <td>서희</td>
+            </tr>
+        
+            <tr>
+                <td>5</td>
+                <td>선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다.</td>
+                <td>윤집</td>
+            </tr>
+        
+            <tr>
+                <td>6</td>
+                <td>법원은 최고법원인 대법원과 각급법원으로 조직된다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</td>
+                <td>조통</td>
+            </tr>
+        
+        </tbody>
+        </table>
+
+</body>
+</html>

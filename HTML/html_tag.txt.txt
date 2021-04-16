@@ -1,0 +1,139 @@
+[typography]
+<b> : bold
+<strong> : 강조(bold)
+<i> : 이탤릭체
+<br> : 줄바꿈
+<mark> : 형광펜 효과
+<pre> : contents 작성법 그대로 웹에 표시 (띄어쓰기, 줄바꿈)
+<hr> : 수평선
+
+
+
+[paragraph]
+<h1> : 제목
+<p> : 문단
+<span> : 
+<div> :
+<blockquote> : 인용문
+
+
+
+[list]
+<ul> : 순서 없는 목록만들기
+<ol> : 순서 있는 목록 만들기
+<li> : 목록 리스트
+<dl> : 정의목록 만들기
+<dt> : 용어(제목)
+<dd> : 정의(내용)
+
+
+
+[table]
+<table> : 표만들기 영역
+<tr> : 행(가로줄)
+<td> : 셀(칸)
+    - rowspan : 행병합 (몇줄 짜리를 만들겠다.)
+    - colspan : 열병합 (몇칸 짜리를 만들겠다.)
+<th> : 제목 셀
+<caption> : 표제목
+<thead> : 표의 머릿글
+<tbody> : 표의 본문
+<tfoot> : 표의 바닥글
+
+
+[multimedia]
+<a> : 앵커 (**theory [0319] 네임앵커 참고)
+    - href="" : url
+    - target="" : 링크 표시 위치 (탭)
+    - title="" : 툴팁
+<img> : 이미지 삽입
+    - src="" : 이미지의 경로
+    - alt="" : 대체 텍스트
+<audio> : 오디오 삽입
+    - src="" : 경로
+    - controls="" : 컨트롤스 삽입
+    - loop="" : 반복재생
+    - autoplay : 자동재생
+<video> : 비디오 삽입
+    - src="" : 경로
+    - controls="" : 컨트롤스 삽입
+    - loop="" : 반복재생
+    - autoplay : 자동재생 
+    - poster="src" : 썸네일 
+<iframe> : 외부 html문서 삽입
+    - src="" :
+    - frameborder="" : 0,1 프레임테두리 사용여부
+    - width, height=""
+<figure> : 이미지나 삽화, 도표 등의 영역을 설정
+<figcaption> : 이미지나 삽화 등의 설명
+
+
+[form]
+<form> : 사용자에게 정보를 입력받는 형식을 만들 영역
+    - action="" : 백엔드,,
+    - method="" : url에 정보를 담아 송출할 것인지 여부 GET(송출), POST(미송출)
+<label> : 라벨가능  요소의 제목
+    -라벨 가능 요소: <button>, <input>, <progress>, <select>, <textarea>
+    - for="" : 참조할 라벨 가능 요소의 id 속성 값
+<input> : 사용자에게 정보를 입력받을 양식
+    - type="" : 따로 정리
+    - disabled : 비활성화 (서버전송X) 
+    - readonly : 읽기전용
+    - placeholder="" : 힌트, 입력시 사라짐
+    - value="" : 초기값
+    - name="" : 양식의 이름
+    - maxlength="" :
+    - minlength="" :
+    - autofocus : 페이지 로드시 자동 포커스
+    - required : 반드시 입력받아야만 서버로 전송
+    - checked : 미리 체크
+<button> 
+    - type=""
+        - submit : 서버로 전송  (<input type="submit">)
+        - reset : 초기화
+        - button  (<input type="button">)
+    - autofocus
+    - disabled
+    - name="" : 서버로 전송되는 버튼이름
+<select> : 드롭다운
+    - autocomplete : 자동완성
+    - disabled : 비활성화
+    - multiple : 다중선택
+    - size="": 한번에 볼 수 있는 행의 개수
+    - form="" : 연결된 <form>의 id 속성 값
+    - name="" : 선택메뉴의 이름
+<option> : 옵션 (**theory 참고)
+    - disabled : 비활성화
+    - label="" : 표시될 옵션의 제목 (생략가능)
+    - value="" : 양식으로 제출될 값 (생략가능)
+    - selected : 기본적으로 선택된 옵션
+<optgroup> : 옵션을 그룹화
+    - label="" : 필수, 옵션 그룹의 제목
+    - disabled : 비활성화
+<datalist> : 자동완성 리스트
+    - id="" : <input>에 바인딩 된 list속성 값
+
+        //// <input type=""> 속성값////
+        - checkbox : 체크박스, 여러개 선택 가능
+        - radio : 라디오 버튼, 한개만 선택 가능
+        - text : 문자
+        - password : 비밀번호 (마스킹 효과)
+        - submit : 서버로 전송 버튼
+        - file : 파일첨부
+        - range : 범위 컨트롤
+            - min : 최소 값
+            - max
+            - step : 증감률
+            - value : 기본값
+        - color : 색선택
+        - date : 달력
+
+<taxtarea> : 여러 줄의 일반 텍스트 양식.
+
+<progress> : 작업의 진행률을 표시
+    - max="" : 작업의 총량
+    - value="" : 작업의 진행량
+        - max 지정X ---> 0.3(30%), 0.7(70%)식으로 표시
+
+
+    

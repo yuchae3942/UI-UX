@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>레이아웃 연습 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }        
+        header{
+            width:1200px;
+            background-color: khaki;
+            margin: 0 auto;
+            padding:30px 0px;
+        }
+        .header_container {
+            display: inline-block;
+            width: 100%;
+        }
+        .txt_search, .btn_search {
+            float: right;
+            height: 32px;
+        }
+        .txt_search {
+            width: 300px;
+            border-radius: 5px;
+            font-size: 20px;
+            box-sizing: border-box;
+            padding: 4px 0px 4px 36px;
+            background-image: url(./iconfinder_copy_370087.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: 4px center;
+        }
+        .btn_search {
+            width: 70px;
+            background-color: lightgreen;
+            color: rgb(17, 71, 17);
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+       .logo {
+           font-family: 'black han sans', sans-serif;
+           float: left;
+           padding-left: 20px;
+           font-size: 32px;
+           text-shadow: 2px 2px 10px gray;
+       }
+       
+        
+        nav{
+            min-width:1200px;
+            background-color: lavender;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0px;
+        }
+        footer{
+            min-width:1200px;
+            height: 200px;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+        .address1 {
+            float: left;
+        }
+        .address2 {
+            float: right;
+        }
+        ul{
+            width: 1000px;
+            list-style-type: none;
+            display: inline-block;
+        }
+        li{
+            width:200px;
+            float: left;
+        }
+        /*하이퍼링크가 걸려있는 상태, 마우스가 올라갔을때(행오버),클릭*/
+        a:link,a:visited{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            padding:20px 0px;
+            display: inline-block;
+            width: 200px;
+            box-sizing: border-box;
+            font-size:20px;
+        }
+        /*마우스가 올라갔을때*/
+        a:hover{
+            background-color:#8b8bce ;
+            color:white;
+            /* border-bottom : 2px solid white; */
+        }
+        a:active{
+            background-color:lavender ;
+        }
+        section{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .content_thumnail{
+            width:150px;
+            height: 300px;
+            display: inline-block;
+            margin-left: 70px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        h2{
+            padding:10px 5px;
+        }
+        h3{
+            padding:3px 5px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        p{
+            height: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .address3 {
+            height: 32px;
+            font-size: 16px;
+        }
+        .contact {
+            font-size: 16px;
+            height: 32px;
+            line-height: 16px;
+            display: inline-block;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <span class="logo">Logo</span>
+            <button class="btn_search">검색</button><input class="txt_search" type="text" id="search" placeholder="검색어를 입력하세요.">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" title="메뉴1 페이지 이동">메뉴1</a></li>
+            <li><a href="#" title="메뉴2 페이지 이동">메뉴2</a></li>
+            <li><a href="#" title="메뉴3 페이지 이동">메뉴3</a></li>
+            <li><a href="#" title="메뉴4 페이지 이동">메뉴4</a></li>
+            <li><a href="#" title="메뉴5 페이지 이동">메뉴5</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="banner_1"></aside>
+        <section>
+            <article>
+                <h2>article 제목</h2>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+            </article>
+            <article>
+                <h2>article 제목</h2>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+                <div class="content_thumnail">
+                    <img src="./tree.jpg" alt="콘텐츠 썸네일 이미지">
+                    <h3>것이다 석가는</h3>
+                    <p>얼음 속에서 불러내는 것이 따뜻한</p>
+                </div>
+            </article>
+        </section>
+        <aside class="banner_2"></aside>
+    </div>
+    <footer>
+        <div class="address1">
+            <p class="address3">회사명: oooooooo</p>
+            <p class="address3">대표 : ooo</p>
+            <p class="address3">사업자 번호 : oooo-oooooo</p>
+            <p class="address3">통신판매업신고번호 : ooo-oooo-ooo</a></p>
+        </div>
+        <div class="address2">
+            <p class="address3">고객센터 연락처<a class="contact" href="tel:00-000-0000" title="고객센터에 전화하기">00-000-000</a></p>
+            <p class="address3">담당자 이메일 : <a class="contact" href="mailto:oooo@ooo.com" title="담당자에게 메일 보내기">oooo@ooo.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

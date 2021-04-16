@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0405_test</title>
+    <link rel="stylesheet" href="./0405_test.css">
+</head>
+<body>
+    <nav class="left_menu">
+        <ul>
+            <li><a href="#" title="바로가기"><img src="./img/home.png" alt=""></a></li>
+            <li><a href="#" title="바로가기"><img src="./img/cup.png" alt=""></a></li>
+            <li><a href="#" title="바로가기"><img src="./img/picture.png" alt=""></a></li>
+            <li><a href="#" title="바로가기"><img src="./img/tv.png" alt=""></a></li>
+            <li><a href="#" title="바로가기"><img src="./img/headphone.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="ad">
+            <img src="./img/grill1.jpg" alt="">
+        </div>
+    </header>
+    <nav class="main_menu clearfix">
+        <ul>
+            <li><a href="#" title="바로가기">HOME</a></li>
+            <li><a href="#" title="바로가기">COFFEE</a></li>
+            <li><a href="#" title="바로가기">CF</a></li>
+            <li><a href="#" title="바로가기">PRINT</a></li>
+            <li><a href="#" title="바로가기">문의하기</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>제품문의하기</h2>
+        <form action="#" method="POST">
+            <ul>
+                <li><label for="title">제목</label>
+                    <input type="text" name="title" id="title" placeholder="제목을 입력해주세요." required></li>
+                <li><label for="name">작성자</label>
+                    <input type="text" name="name" id="name" placeholder="작성자의 성함을 입력해주세요." required></li>
+                <li><label for="email">답변받을 이메일</label>
+                    <input type="text" name="email" id="email" placeholder="이메일 주소" required>
+                    <span>@</span>
+                    <select>
+                        <option value="gamil">gmail.com</option>
+                        <option value="naver">naver.com</option>
+                        <option value="hanmail">hanmail.net</option>
+                        <option value="self">직접입력</option>
+                    </select></li>
+                <li><label for="contents">문의내용</label>
+                    <input type="textarea" name="contents" id="contents" placeholder="문의 내용을 입력해주세요." required></li>
+            </ul>
+        </form>
+        <button type="submit" name="ask">문의하기</button>
+        <button type="reset" name="reset">초기화</button>
+    </section>
+
+</body>
+</html>

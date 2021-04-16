@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break_quest1</title>
+    <script>
+        /*
+        xy + yx = 99 (자릿수에염)
+        x : 1, y : 8 ---> 99
+        x : 
+        */
+
+        for( x=0; x<10; x++) {
+            for(y=0; y<10; y++) {
+                if(x+y == 9 ){
+                    document.write("x: ",x,", y: ",y,"<br>");
+                    break; // 직접 감싸고 있는 반복문을 종료
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

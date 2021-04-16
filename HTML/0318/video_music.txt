@@ -1,0 +1,10 @@
+동영상 format
+    -mov, mp4, ogv, avi, mkv, wmv 확장자 별로 코덱이 필요하다.(짜증)
+    -ActiveX(외부 플러그인) 이용하여 재생
+    -HTML5 별도의 코덱이 필요없다. 웹브라우저에서 재생 가능하게 바꿈
+        -지원하는 format: webm, ogv, mp4 
+음원 format
+    -mp3, ogg, AAC, flac
+    -HTML5에서 지원하는 format: mp3, ogg 
+
+    

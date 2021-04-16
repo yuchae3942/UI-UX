@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float_left_right</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+        .box1 {
+                background-color: rgb(245, 94, 124);                       
+        }
+        .box2 {
+                background-color: rgb(66, 131, 252);
+        }
+        .box3 {
+                background-color: rgb(73, 223, 140);
+                width: 1000px;
+                height: 200px;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .clear {
+            clear: both;
+        }
+        .container {
+            width: 1200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1 left"></div>
+        <div class="box2 right"></div>
+    </div>
+    <div class="box3 clear"></div>
+</body>
+</html>

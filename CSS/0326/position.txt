@@ -1,0 +1,10 @@
+position  
+    웹상에서 해당요소를 고정하는 형태
+    fixed absolute relative
+    top,left,right, bottom속성을 이용해서 원하는 곳에 배치
+
+
+z-index 
+    레이어 개념으로 값이 높을수록 앞에 출력, 낮을수록 뒷편에 배치
+    z-imdex를 사용하려면 position: static;이면 안된다.
+

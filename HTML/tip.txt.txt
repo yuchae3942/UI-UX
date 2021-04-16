@@ -1,0 +1,40 @@
+- &nbsp; : 띄어쓰기
+- &copy; : 카피라이트 아이콘
+- ctrl + space : 입력할 내용의 힌트
+- ctrl + shift + p : 모든명령어
+- 드래그 + alt + 방향키 : 태그 위치 변경
+- <form>태그 속성 중 method="POST"로 쓰는거 추천
+- 같은 항목 한번에 선택하기 : 드래그 + ctrl + f2
+- .class : <div class="class">
+- #id : <div id="id">
+- p.class : <p class="class">
+- p#id : <p id="id">
+
+- Emmet문법
+.container>ul.list>li.list-itam*10>a{List$}
+ <div class="container">
+        <ul class="list">
+            <li class="list-itam"><a href="">List1</a></li>
+            <li class="list-itam"><a href="">List2</a></li>
+            <li class="list-itam"><a href="">List3</a></li>
+            <li class="list-itam"><a href="">List4</a></li>
+            <li class="list-itam"><a href="">List5</a></li>
+            <li class="list-itam"><a href="">List6</a></li>
+            <li class="list-itam"><a href="">List7</a></li>
+            <li class="list-itam"><a href="">List8</a></li>
+            <li class="list-itam"><a href="">List9</a></li>
+            <li class="list-itam"><a href="">List10</a></li>
+        </ul>
+    </div>
+
+
+    .fruits>div+p*2+span
+    <div class="fruits">
+    <div></div>
+    <p></p>
+    <p></p>
+    <span></span>
+    </div>
+
+
+    

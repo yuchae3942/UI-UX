@@ -1,0 +1,59 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 3px groove;
+    padding: 5px 40px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    /* margin: 0 auto;*/
+}
+
+button {
+    display: block;
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 3px solid green;
+    font-size: 18px;
+    margin-top: 5px;
+    background-color: mediumseagreen;
+    color: white;
+    font-weight: 600;
+    /* margin: 0 auto; */}
+
+button:active {
+    background-color: rgb(14, 207, 111);
+}
+
+input:first-child {
+    background-image: url('/0331/iconfinder_account-circle_326497.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 5px 7px;
+}
+input:last-child {
+    background-image: url('/0331/iconfinder_key_383118.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 5px 7px;
+}

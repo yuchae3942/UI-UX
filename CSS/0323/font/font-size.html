@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>폰트사이즈</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--
+        pt : 워드, 문서 작업시 사용하는 글자 크기 단위
+        px : pixel 단위, 절대 단위
+        em : 부모요소에 적용된 글꼴 크기를 기준으로 비율로 계산해서 크기를 지정
+        rem : (root) 즉, html에 적용된 폰트 사이즈가 기준
+    -->
+
+    <style>
+        /* 일반적 글꼴 기본 크기 = 16px*/
+        /* /* body {
+            font-size: 50px;
+        } */
+       .px32 { font-size: 32px;}
+       .px24 { font-size: 24px;}
+       .em2 { font-size: 2em;}
+       .em1_5 { font-size: 1.5em;}
+       .em1 { font-size: 1em;}
+       .per200 { font-size: 200%;}
+       .per150 { font-size: 150%;}
+       .per100 { font-size: 100%;}
+
+       p {
+           font-size: 2em;
+       }
+       span {
+           font-size: 2em;
+       }
+
+    </style>
+</head>
+<body>
+    <p class="px32">32</p>
+    <p class="px24">25</p>
+    <p class="em2">2em</p>
+    <p class="em1_5">1.5em</p>
+    <p class="em1">1em(=기본사이즈)</p>
+    <p class="per200">200%</p>
+    <p class="per150">150%</p>
+    <p class="per100">100%</p>
+    <p>기본 사이즈</p>
+
+
+    <div> 조상요소입니다.
+        <p> 부모요소입니다. 
+            <span>
+                부모-자식요소입니다.
+            </span>
+        </p>
+        <span>
+            조상-자식요소입니다.
+        </span>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

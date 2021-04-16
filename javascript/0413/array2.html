@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        /*
+            add
+            delete
+            search
+
+            배열생성 방법 2가지
+            1. var arr = new Array();
+            2. var arr = [];
+        */
+        var arr = new Array();
+
+        arr.push(1); // index - 0
+        arr.push(4); // index - 1
+        arr.push(5); // index - 2
+        arr.push(2); // index - 3
+        arr.push(3); // index - 4
+        arr.push(1); // index - 5
+        
+
+        printArray(arr);
+        document.write("<h2>배열 요소 검색</h2>");
+        document.write("값 5에 해당하는 인덱스 번호 : ", arr.indexOf(5), "<br>"); //indexOf(검색할 값) ----> 해당값이 위치한 index번호값 리턴
+        document.write("값 3에 해당하는 인덱스 번호 : ", arr.indexOf(3), "<br>");
+
+        document.write("<h2>배열 요소 삭제</h2>");
+        document.write(arr.splice(arr.indexOf(5), 1), "추출한 배열 <br>"); //arr.indexOf(5), 1 ---> 나는 5번 index부터 1개를 추출할거임
+        printArray(arr);
+
+        //배열 내용 전체 출력
+        function printArray(arr){
+        for(i=0; i<arr.length; i++) {
+            document.write(arr[i], " ");
+        }
+    }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

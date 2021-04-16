@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date quest</title>
+    <script>
+        //2021년 11월 18일 (목) 올해 수능일
+        // var today = new Date();
+        // document.write(today, "<br>");
+        // document.write("년도 : ", today.getFullYear(), "<br>");
+        // document.write("월 : ", today.getMonth(), "<br>");
+        // document.write("일 : ", today.getDate(), "<br>");
+        // document.write("요일 : ", today.getDay(), "<br>");
+
+        var today = new Date("2021-04-12 00:00:00");
+        var Tday = new Date("2021-11-18 00:00:00");
+
+        var Dday = (Tday.getTime() - today.getTime());
+
+        console.log("수능까지 앞으로 " +Dday + "일 남았습니다.");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class</title>
+    <style>
+        /* div {
+            width: 100px;
+            height: 100px;
+            background-color: darkgoldenrod;
+        }
+        .box1 {
+            background-color: #808080;
+        }
+        .box2 {
+            background-color: crimson;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <div class="box1" onmouseover="changeBackground()"></div>
+    <div class="box2"></div> -->
+    <div class="box1" onmouseover="changeBackground()" style="width: 100px; height: 100px; background-color: darkseagreen;"></div>
+    <div class="box2" style="width: 100px; height: 100px; background-color: darkcyan;"></div>
+<script>
+       
+        function changeBackground() {
+            var box = document.getElementsByTagName("div")[0];
+            //현재 선택된 박스의 배경색 값을 읽어오기
+            box.style.backgroundColor = "dodgerblue";
+    
+
+            //JS로 HTML에 class값 추가하기
+            // box.className += "border";
+            //trim () 메서드는 문자열 양쪽에서 공백을 제거합니다.
+            //trim()메서드는 원래 문자열을 변경하지 않는다.
+
+        }
+        alert(box[0].style.backgroundColor);
+    </script>
+    
+</body>
+</html>

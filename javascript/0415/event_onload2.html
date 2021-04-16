@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onload</title>
+    <script>
+        // window.onload : 모~~~든 태그 다 읽어들였다
+        window.onload = function(){
+            var img = document.getElementsByTagName("img")[0];
+            img.onload = function(){ //이미 window.onload가 이미지를 로드했기 때문에, 이미지가 로드되면서 일어나는 event는 실행될수 없다.
+                alert("image load");
+            }
+        }
+        // 이미 이미지가 로드된 후여서 해당 이벤트는 실행되지 않는다??????????????????????????
+        function imgLoad(){
+            alert("imgLoad");
+        }
+    </script>
+</head>
+<body>
+    <h1>onload event test</h1>
+    <img src="../Chae2.jpg" alt="alternative text">
+    <h2> h2 section </h2>
+</body>
+</html>
+
+
+<!--
+<body>
+   ...
+</body>
+
+<script>
+        var img = document.getElementsByTagName("img")[0];
+        img.onload = function(){ //이미 window.onload가 이미지를 로드했기 때문에, 이미지가 로드되면서 일어나는 event는 실행될수 없다.
+            alert("image load");
+        }
+        // 이미 이미지가 로드된 후여서 해당 이벤트는 실행되지 않는다??????????????????????????
+</script>
+
+이 순서대로 하면 ㅇㅇ 
+
+*img.onload는 이미지가 로드될 때 실행되는 함수*
+*즉, <img>가 먼저 로드되어야하며, 로드가 시작하면서 .onload실행
+
+-->

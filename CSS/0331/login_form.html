@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_form</title>
+    <link rel="stylesheet" href="/0331/css/login_form.css">
+</head>
+<body>
+    
+        <div id="container">
+            <form action="#" method="POST">
+                <div class="form">
+                    <input type="text" class="" placeholder="아이디를 입력하세요.">
+                    <input type="password" class="" placeholder="암호를 입력하세요.">
+                </div>
+                <div class="btn">
+                    <button type="button">로그인</button>
+                    <button type="button">회원가입</button>
+                </div>
+            </form>
+        </div>
+
+
+        <!--
+            BETTER
+            1. input, button 등은 form으로 묶어주는게 좋다.
+            2. input, button은 label을 사용하여 웹접근성을 신경써주자.
+                -  display:none 혹은 visibility:hidden
+                외에도 font-size:0; / line-height:0; / width:0px; height:0px 등을 사용 해서 숨기기도 하는데 이 역시 스크리 리더가 읽을 수 없다
+                - ** 근데,,,,,,,,,,** label을 font-size: 0;, width, height  등등 사이즈  0으로 해놓은 페이지 웹접근성연구소에서 인증해줌
+                아님,,, label없어도 인증해주네연,,,,, 애초에 안다는게 속편하겟어여
+            3. input, button은 id, name속성을 필수로 사용하자
+
+        -->
+    
+</body>
+</html> 

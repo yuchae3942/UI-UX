@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date object</title>
+    <script>
+        //오늘 날짜 정보를 획득
+        // 객체 생성 (메모리를 할당하겠다. ---> 변수선언과 비슷?? new 키워드 필)
+        var today = new Date();
+        document.write(today, "<br>");
+        document.write("년도 : ", today.getFullYear(), "<br>");
+        document.write("월 : ", today.getMonth(), "<br>");
+        document.write("일 : ", today.getDate(), "<br>");
+        document.write("요일 : ", today.getDay(), "<br>");
+
+        //2021-04-11 날짜 지정
+        // (month는 -1)
+        var yday = new Date(2021,03,11);
+        document.write(yday, "<br>");
+        document.write("년도 : ", yday.getFullYear(), "<br>");
+        document.write("월 : ", yday.getMonth(), "<br>");
+        document.write("일 : ", yday.getDate(), "<br>");
+        document.write("요일 : ", yday.getDay(), "<br>");
+
+        today = new Date(2021,3,12)
+        document.write(today.getTime(), "<br>");
+        document.write(yday.getTime(), "<br>");
+        document.write(today-yday, "<br>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

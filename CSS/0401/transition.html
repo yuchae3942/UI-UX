@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link,a:visited {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            background-size: 32px;
+            background-image: url("../icon/youtube.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            transition-duration: 1s;
+            transition-property: all;
+        }
+        a:hover {
+            background-color: cornflowerblue;
+            border-radius: 50px;
+            background-size: 80px;
+            background-image: url(../icon/sponer.jpg);
+        }
+
+        /* box css */
+
+        #box {
+            width: 150px;
+            height: 150px;
+            background-size: 100px;
+            background-image: url("../icon/youtube.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            animation-name: ani1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; /*무한대-infinite, 반복횟수 지정*/
+            animation-direction: alternate-reverse;
+        }
+
+        #box:active {
+            animation-name: ani1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; /*무한대-infinite, 반복횟수 지정*/
+            animation-direction: alternate-reverse;
+        }
+        /*@keyframed 애니메이션명{}*/
+        @keyframes ani1 {
+            from {
+                background-image: url("../icon/youtube.png");
+            }
+            to {
+                background-image: url(../icon/sponer.jpg);
+            }
+        }
+        @keyframes ani2 {
+            0% {
+                margin-left: 0;
+            }
+            50% {
+                margin-left: 885px;
+            }
+            100% {
+                margin-left: 1845px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#"></a>
+    <hr>
+    <div id="box"></div>
+</body>
+</html>

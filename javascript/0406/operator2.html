@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합연산자</title>
+    <script>
+        /*
+            변수 num을 선언해서 값을 10으로 초기화
+            그 후에 변수 num에다가 20을 더해서 저장
+        */
+        var num = 10;
+        // num = num + 20 + num;
+        num += 20; //오른쪽에 있는 값(20)을 왼쪽(num = 10)에 더해서 저장하겠다.
+        document.write(num, "<br>");
+        /*
+            복합대입연산자 : 
+            *+=*
+            -=
+            *=
+            /=
+            %=
+        */
+       num -= 10;
+       document.write(num, "<br>");
+
+       num /= 10;
+       document.write(num, "<br>");
+
+       var num2 = "안녕";
+
+       num += num2
+       document.write(num, "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

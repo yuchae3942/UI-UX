@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event function</title>
+    <script>
+        function readTxt(){
+            //js에서 html태그에 접근하는 방법 - id값을 이용
+            var txt = document.getElementById("txt");
+            console.log(txt.value);//txt에 입력한 값을 읽어옴
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt" onkeyup="readTxt()"><button onclick="readTxt()">실행</button>
+
+</body>
+</html>

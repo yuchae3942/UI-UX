@@ -1,0 +1,53 @@
+@charset 'utf-8'; /*문자 인코딩 방식*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+section {
+ margin-top: 200px;
+ text-align: center;
+}
+
+
+section input {
+    width: 400px;
+    height: 44px;
+    font-size: 20px;
+    background-image: url("/0330/search.png");
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px center;
+    border-style: none;
+
+}
+form {
+    border: 1px solid silver;
+    border-radius: 22px;
+    display: inline-block;
+    padding: 0 20px;
+
+}
+form>* {
+    
+    float: left;
+}
+
+form a {
+    display: inline-block;
+    height: 32px;
+    padding: 8px 0;
+    margin-left: 10px;
+
+}
+form img {
+    width: 32px;
+}
+article {
+    clear: both;
+}
+
+input:focus, input:active {
+    outline: none;
+}

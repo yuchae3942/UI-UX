@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <script>
+        var str = "가나다라마바사아자차카타파하 거나더러머버서어저처커터퍼허나";
+        // 문자열에서 위치에 해당하는 한글자 추출 - 위치값은 0부터 시작
+        document.write(str.charAt(5), " ", str.charAt(6));
+        // 문자열 검색 - 검색 결과가 없으면 -1을 리턴, 있으면 해당 위치값 리턴
+        document.write(str.indexOf("타파"), "<br>");
+        document.write(str.indexOf("타파", 16), "<br>"); // 16: 16번째 문자열 이후부터 찾겠다 ---> 찾을 수 없으면 -1
+        // document.write(str.lastIndexOf("타파"), "<br>");
+        // document.write(str.lastIndexOf("타파", 16), "<br>");
+
+        //문자열 개수
+        document.write("문자열 개수 : ", str.length, "<br>") //이때, .length는 함수가 아니래요,, 
+
+
+        //문자열 바꾸기
+        document.write(str.replace("나", "누"), "<br>"); //첫번째로 찾은 문자열만 바꾼다, 바꾼값을 리턴하지만 변경된 값으로 저장되지는 않는다. 
+        str = str.replace("나", "누");//바꾼 후 저장
+        str = str.replaceAll("나", "누"); // 찾은 모든 문자열을 바꿈
+        document.write(str, "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

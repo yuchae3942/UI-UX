@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string2</title>
+    <script>
+        var str = "Hi guys i'm Chaeeun Liu";
+        //문자열 부분 추출하는 함수가 substr substring
+        //4번 인덱스부터 10글자
+        document.write(str.substr(4, 10), "<br>")
+        //4번 인덱스부터 10번인덱스까지 
+        document.write(str.substring(4, 10), "<br>")
+        // 4번 인덱스부터 나머지 글자 전부 추출
+        document.write(str.substring(4), "<br>")
+        document.write(str.substr(4), "<br>")
+        //대소문자 변경
+        //소문자
+        document.write(str.toLowerCase(), "<br>")
+        //대문자 
+        document.write(str.toUpperCase(), "<br>")
+
+
+        //문자 코드값 뽑기
+        var str2 = "ㅎ";
+        document.write(str2.charCodeAt(0), "<br>")
+        document.write(String.fromCharCode(12599), "<br>")
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
